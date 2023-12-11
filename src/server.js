@@ -49,4 +49,5 @@ app.engine('.hbs',engine({
 // Establecer el metodo de plantillas
 app.set('view engine','.hbs')
 app.use(express.static(path.join(__dirname,'public')))
+app.use(require('./routers/index.routes'))
 module.exports = app
