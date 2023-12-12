@@ -15,6 +15,8 @@ app.set('views',path.join(__dirname, 'views'))
 // Middlewares 
 // Servidor va a trabajar con informacion en base a formularios
 app.use(express.urlencoded({extended:false}))
+const methodOverride = require('method-override');
+app.use(methodOverride('_method'))
 
 
 // Variables globales
@@ -50,4 +52,5 @@ app.engine('.hbs',engine({
 app.set('view engine','.hbs')
 app.use(express.static(path.join(__dirname,'public')))
 app.use(require('./routers/index.routes'))
+app.use(require('./routers/portafolio.routes'))
 module.exports = app
