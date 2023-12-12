@@ -6,6 +6,8 @@ const Portfolio = require('../models/Portfolio.js')
 const renderAllPortafolios = async(req,res)=>{
     const portfolios = await Portfolio.find().lean()
     res.render("portafolio/allPortfolios",{portfolios})
+    // Formato json
+    // res.json({portfolios})
 }
 
 // Metodo para listar el detalle de un portafolio
