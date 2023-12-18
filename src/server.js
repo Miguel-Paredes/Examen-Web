@@ -26,6 +26,13 @@ app.use(methodOverride('_method'))
 app.get('/',(req,res)=>{
     res.render('index')
 })
+app.use(require('./routers/index.routes'))
+app.use(require('./routers/portafolio.routes'))
+app.use(require('./routers/user.routes'))
+
+
+
+
 
 // Archivos estáticos
 // Definir archivos estaticos y publicos
@@ -51,6 +58,5 @@ app.engine('.hbs',engine({
 // Establecer el metodo de plantillas
 app.set('view engine','.hbs')
 app.use(express.static(path.join(__dirname,'public')))
-app.use(require('./routers/index.routes'))
-app.use(require('./routers/portafolio.routes'))
+
 module.exports = app
