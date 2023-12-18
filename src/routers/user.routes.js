@@ -1,3 +1,4 @@
+const { redirectIfAuthenticated } = require('../helpers/validate-auth')
 const {Router} = require('express')
 const { renderRegisterForm, registerNewUser, renderLoginForm, loginUser, logoutUser } = require('../controllers/user.controller')
 const router = Router()
@@ -10,7 +11,7 @@ router.post('/user/register',registerNewUser)
 
 
 // Ruta mostrar el formulario del login
-router.get('/user/login',renderLoginForm)
+router.get('/user/login', redirectIfAuthenticated, renderLoginForm)
 // Ruta para capturar los datos del login y realizar el proceso de login en conjunto con BDD
 router.post('/user/login',loginUser)
 
