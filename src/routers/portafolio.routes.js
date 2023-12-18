@@ -1,3 +1,6 @@
+// Importar el metodo
+const {isAuthenticated} = require('../helpers/validate-auth')
+
 const{Router} = require('express')
 
 const router = Router()
@@ -12,21 +15,21 @@ const { renderAllPortafolios,
     } = require('../controllers/portafolio.controller.js')
 
 // Cargar la vista de formulario
-router.get('/portafolio/add', renderPortafolioForm)
+router.get('/portafolio/add', isAuthenticated,renderPortafolioForm)
 // Captura los datos del formulario
-router.post('/portafolio/add', createNewPortafolio)
+router.post('/portafolio/add', isAuthenticated,createNewPortafolio)
 
 // Presentar formulario
-router.get('/portafolios', renderAllPortafolios)
+router.get('/portafolios', isAuthenticated,renderAllPortafolios)
 // Presentar detalle formulario
-router.get('/portafolio/:id', renderPortafolio)
+router.get('/portafolio/:id', isAuthenticated,renderPortafolio)
 
 // Cargar vista del formulario
-router.get('/portafolio/edit/:id', renderEditPortafolioForm)
+router.get('/portafolio/edit/:id', isAuthenticated,renderEditPortafolioForm)
 // Capturar y guardar datos en la base de datos
-router.put('/portafolio/edit/:id', updatePortafolio)
+router.put('/portafolio/edit/:id', isAuthenticated,updatePortafolio)
 
 // Eliminar el portafolio
-router.delete('/portafolio/delete/:id', deletePortafolio)
+router.delete('/portafolio/delete/:id', isAuthenticated,deletePortafolio)
 
 module.exports = router
