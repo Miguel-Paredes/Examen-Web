@@ -1,11 +1,24 @@
+// Importaciones
 // Importar express
 const express = require('express')
 // Importar path
 const path = require('path') //COMMON JS
+// Importacion de passport
+const passport = require('passport');
+// Importacion de session
+const session = require('express-session');
+
+
+
 
 // Inicializaciones
 // Instanciar express
 const app = express()
+// Inicializar el archivo de configuracion
+require('./config/passport')
+
+
+
 
 // Configuraciones
 // Variables de configuracion
@@ -18,9 +31,23 @@ app.use(express.urlencoded({extended:false}))
 const methodOverride = require('method-override');
 app.use(methodOverride('_method'))
 
+// Configurar la sesion del usuario
+app.use(session({ 
+    secret: 'secret',
+    resave:true,
+    saveUninitialized:true
+}));
+// Inicializar password.js
+app.use(passport.initialize())
+app.use(passport.session())
+
+
+
+
+
+
 
 // Variables globales
-
 // Rutas 
 // Primera ruta
 app.get('/',(req,res)=>{
