@@ -50,8 +50,9 @@ app.use(passport.session())
 // Variables globales
 // Rutas 
 // Primera ruta
-app.get('/',(req,res)=>{
-    res.render('index')
+app.use((req,res,next)=>{
+    res.locals.user = req.user?.name || null
+    next()
 })
 app.use(require('./routers/index.routes'))
 app.use(require('./routers/portafolio.routes'))
