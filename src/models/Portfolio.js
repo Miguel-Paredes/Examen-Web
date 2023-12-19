@@ -18,7 +18,11 @@ const portfolioSchema = new Schema({
     user:{
         type:String,
         required:true
-}
+    },
+    image:{
+        public_id:String,
+        secure_url:String
+    }
 },{
     timestamps:true
 })
