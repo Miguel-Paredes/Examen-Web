@@ -7,7 +7,8 @@ const path = require('path') //COMMON JS
 const passport = require('passport');
 // Importacion de session
 const session = require('express-session');
-
+// Importacion de fileUpload
+const fileUpload = require('express-fileupload')
 
 
 
@@ -24,6 +25,12 @@ require('./config/passport')
 // Variables de configuracion
 app.set('port', process.env.port || 3000)
 app.set('views',path.join(__dirname, 'views'))
+// Establecer la carpeta temporal y el directorio
+app.use(fileUpload({
+    useTempFiles : true,
+    tempFileDir : './uploads'
+}));
+
 
 // Middlewares 
 // Servidor va a trabajar con informacion en base a formularios
