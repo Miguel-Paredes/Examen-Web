@@ -24,6 +24,8 @@ const renderPortafolioForm = (req,res)=>{
 const createNewPortafolio =async (req,res)=>{
     const {title, category,description} = req.body
     const newPortfolio = new Portfolio({title,category,description})
+    // Asociar el portafolio con el usuario
+    newPortfolio.user = req.user._id
     await newPortfolio.save()
     res.redirect('/portafolios')
 }
@@ -31,7 +33,7 @@ const createNewPortafolio =async (req,res)=>{
 // Metodo para actualizar el formulario
 const renderEditPortafolioForm =async(req,res)=>{
     // Consulta del portafolio en base de datos con el id
-    const portfolio = await Portfolio.findById(req.params.id).lean()
+    const portafolios = await Portfolio.find({user:req.user._id}).lean()
     // Mandar a la vista
     res.render('portafolio/editPortfolio',{portfolio})
 }
