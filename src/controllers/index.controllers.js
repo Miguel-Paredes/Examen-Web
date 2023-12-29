@@ -1,16 +1,16 @@
+// Importar el modelo
+const Portfolio = require('../models/Portfolio')
 
-// Primera funcion para renderizar el index
-const renderIndex = (req,res)=>{
-    res.render('index')
+// Metodo para listar todos los portafolios
+const renderIndex = async(req,res)=>{
+    // Consultar todos los portafolios, transformar a JSON y almacenarlos en la variable portfolios
+    const portfolios = await Portfolio.find().lean()
+    // Invocar a la vista index y pasar la variable portfolios
+    res.render('index',{portfolios})
 }
 
-// Primera funcion para renderizar el login
-const renderAbout = (req,res)=>{
-    res.render('login')
-}
 
-// Exportar dos funciones
+// Exportar de la funcion
 module.exports ={
     renderIndex, 
-    renderAbout
 }
