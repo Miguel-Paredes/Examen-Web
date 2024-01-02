@@ -5,11 +5,11 @@ const Portfolio = require('../models/Portfolio.js')
 const fs = require('fs-extra')
 
 // Importar el metodo
-const { uploadImage } = require('../config/cloudinary')
+const { uploadImage, deleteImage} = require('../config/cloudinary')
 
 // Metodo para listar portafolios
 const renderAllPortafolios = async(req,res)=>{
-    const portfolios = await Portfolio.find().lean()
+    const portfolios = await Portfolio.find({user:req.user._id}).lean()
     res.render("portafolio/allPortfolios",{portfolios})
     // Formato json
     // res.json({portfolios})
