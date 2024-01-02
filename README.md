@@ -77,6 +77,14 @@ Se conecta el presente repositorio con Render para desplegarlo en la nube
 Se uso MongoDB Atlas para el despliegue y uso de base de datos. 
 ![image](https://github.com/Miguel-Paredes/Examen-Web/assets/117741739/03365cdf-ddd7-4763-b864-8419df0ef854)
 
+#### Deploy en Render 
+Se utiliza un repository en GitHub para realizar el despliegue del proyecto
+![image](https://github.com/Miguel-Paredes/Examen-Web/assets/102696740/af33e359-dbba-4db1-b626-dd92f7dc64fe)
+![image](https://github.com/Miguel-Paredes/Examen-Web/assets/102696740/882b322f-3a18-4289-b360-f252eda32aef)
+
+#### Se configura las variables de entorno de la base de datos y cloudinary
+![image](https://github.com/Miguel-Paredes/Examen-Web/assets/102696740/314753c6-db8d-4355-a4e0-f43d669d2e71)
+
 
 ## Enlaces - Personales
 
