@@ -72,6 +72,12 @@ Se conecta el presente repositorio con Render para desplegarlo en la nube
 
 ![image](https://github.com/Miguel-Paredes/Examen-Web/assets/117741739/1ba5b7be-e949-4d77-a5ec-0fd4a8801fd3)
 
+
+#### Base de Datos
+Se uso MongoDB Atlas para el despliegue y uso de base de datos. 
+![image](https://github.com/Miguel-Paredes/Examen-Web/assets/117741739/03365cdf-ddd7-4763-b864-8419df0ef854)
+
+
 ## Enlaces - Personales
 
 - [Joseph Yépez](https://github.com/JosephYM07)
