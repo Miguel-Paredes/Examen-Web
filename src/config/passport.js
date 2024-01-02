@@ -17,29 +17,16 @@ passport.use(new LocalStrategy({
     // buscar el usuario en base al email
     const userBDD = await User.findOne({email})
     // Verificar si existe el usuario
-    if(!userBDD) return done(showAlert(errorMessage),false,)
+    if(!userBDD) return done('¡Lo sentimos! El email no se encuentra registrado.',false)
     // Desincriptar el passowrd
     const passwordUser = await userBDD.matchPassword(password)
-    if(!passwordUser) return done(showAlert(errorMessage2),false)
+    if(!passwordUser) return done('¡Lo sentimos! Los passwords no coinciden.',false)
     // Validar si el usuairo puede iniciar sesion si y solo si ha confirmado su cuenta de correo electronico
-    if(userBDD.confirmEmail===false) return done(showAlert(errorMessage3),false)
+    if(userBDD.confirmEmail===false) return done('¡Lo sentimos! Debe verificar la cuenta en su correo electrónico.',false)
     // Retornar el usuario de BDD
     return done(null,userBDD)
 }))
 
-
-
-function showAlert(message) {
-  notifier.notify({
-    title: '¡Lo sentimos!',
-    message: message,
-    sound: true
-  });
-}
-
-const errorMessage = 'El email no se encuentra registrado.';
-const errorMessage2 = 'Los passwords no coinciden.';
-const errorMessage3 = 'Debe verificar la cuenta en su correo electrónico.';
 
 passport.serializeUser((user,done)=>{
     done(null,user.id)
