@@ -35,15 +35,42 @@ Se han delineado las actividades principales con la colaboración del Product Ow
 
 El Sprint 1 se centra en la acción de "enviar un correo electrónico" con el fin de que los usuarios se registren por primera vez en el sistema web, permitiéndoles posteriormente iniciar sesión únicamente después de haber confirmado la cuenta a través del correo electrónico enviado.
 
-<img src="https://raw.githubusercontent.com/Miguel-Paredes/Examen-Web/assets/117741739/3374999a-0729-4c1a-8317-edcb8e68cb31" alt="Login" style="max-width: 500px;">
+![image](https://github.com/Miguel-Paredes/Examen-Web/assets/117741739/043f2e91-e9d3-410f-9b6e-da5631e659ad)
+Login
 
-### 2. Realizar la implementacion del Sprint 1
+![image](https://github.com/Miguel-Paredes/Examen-Web/assets/117741739/c93ccb24-e696-44df-9ce3-ed49e5461a97)
+Verificación de correo
 
-### 3. Realizar la implementacion del Sprint 1
+![image](https://github.com/Miguel-Paredes/Examen-Web/assets/117741739/10e70220-acf0-47b2-ade1-952b3089a252)
+Correo Verificado
 
-### 4. Desplegar la aplicación en un modelo de servicio en la nube
+
+### 4. Realizar la implementacion del Sprint 2
+
+El Sprint 2 consiste en presentar la funcionalidad de “Listar portafolios” en la landing page principal.
+
+![image](https://github.com/Miguel-Paredes/Examen-Web/assets/117741739/cfea2d6e-0f00-4e04-8ad9-a219c54b3674)
+Portafolios listados
+
+### 5. Realizar la implementacion del Sprint 3
+
+El Sprint 3 consiste en presentar la funcionalidad “Formulario de contacto” para que el usuario pueda llenar y sea funcional. 
+
+![image](https://github.com/Miguel-Paredes/Examen-Web/assets/117741739/476eeb03-0bd7-43fe-aa7d-68add7e6e994)
+Formulario de Contacto
+
+![image](https://github.com/Miguel-Paredes/Examen-Web/assets/117741739/9d94de5c-603b-44bf-98ec-d69da833f380)
+Formulario enviado con éxito
+
+![image](https://github.com/Miguel-Paredes/Examen-Web/assets/117741739/b4cf1b2e-b34d-4972-b648-108fa712e3aa)
+Formulario Recibido
 
 
+### 6. Desplegar la aplicación en un modelo de servicio en la nube
+
+Se conecta el presente repositorio con Render para desplegarlo en la nube
+
+![image](https://github.com/Miguel-Paredes/Examen-Web/assets/117741739/1ba5b7be-e949-4d77-a5ec-0fd4a8801fd3)
 
 ## Enlaces - Personales
 
